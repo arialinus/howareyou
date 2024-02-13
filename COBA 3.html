@@ -21,8 +21,15 @@
         }
     </style>
     <script>
+        var originalContent;
+
         function changeContent() {
-            document.body.innerHTML = "<h1>im glad you're okay. im so so happy for you. i hope you're in your state right now for longest time. but if one day you feel like something bothering you, you can open this page again for maybe some comfort :)</h1>";
+            originalContent = document.body.innerHTML;
+            document.body.innerHTML = "<h1>im glad you're okay. im so so happy for you. i hope you're in your state right now for longest time. but if one day you feel like something bothering you, you can open this page again for maybe some comfort :)</h1><button onclick='goBack()'>⬅️ Kembali</button>";
+        }
+
+        function goBack() {
+            document.body.innerHTML = originalContent;
         }
     </script>
 </head>
